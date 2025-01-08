@@ -1,11 +1,12 @@
 :root {
     --primary: #036661;
-    --primary-dark: #024441;
-    --primary-light: #048783;
-    --background: #1A1A1A;
-    --background-light: #2A2A2A;
+    --primary-dark: #0A192F;
+    --primary-light: #05A89F;
+    --background: #0A1021;
+    --background-light: #2D1B4E;
     --text: #FFFFFF;
-    --text-secondary: #A0A0A0;
+    --text-secondary: #FF2E88;
+    --accent: #FF2E88;
 }
 
 * {
@@ -39,7 +40,7 @@ code, pre {
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(10, 16, 33, 0.8);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(3, 102, 97, 0.2);
     z-index: 1000;
