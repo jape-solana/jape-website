@@ -1,14 +1,13 @@
 {
   "name": "jape-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "serve .",
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
+    "serve": "^14.0.0",
     "@react-three/drei": "^9.120.5",
     "@react-three/fiber": "^8.17.10",
     "chart.js": "^4.4.1",
