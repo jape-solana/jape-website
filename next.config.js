@@ -1,17 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  distDir: '.next',
   images: {
-    unoptimized: true,
+    domains: [], // Add any image domains you need
   },
-  // Ensure static assets are copied to the output
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.output.publicPath = '/_next/';
-    }
-    return config;
-  },
+  // Remove the webpack config since it's not needed
 }
 
 module.exports = nextConfig

@@ -239,6 +239,104 @@ body {
     font-size: 0.9rem;
 }
 
+/* Announcements Section */
+.announcements {
+    padding: 60px 0;
+    background: linear-gradient(180deg, var(--background) 0%, var(--background-light) 100%);
+}
+
+.announcement-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.announcement-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(94, 234, 212, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(94, 234, 212, 0.1);
+}
+
+.announcement-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.announcement-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--primary-light), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.announcement-card .date {
+    font-size: 18px;
+    color: var(--primary-light);
+    margin-bottom: 10px;
+}
+
+.announcement-card .description {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.token-launch {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(94, 234, 212, 0.1);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(94, 234, 212, 0.2);
+    }
+}
+
+/* Fine Print Section */
+.fine-print {
+    padding: 60px 0;
+    background: var(--background);
+}
+
+.fine-print h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fine-print-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(94, 234, 212, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.fine-print-content p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.fine-print-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* Footer */
 .footer {
     background: var(--background-light);

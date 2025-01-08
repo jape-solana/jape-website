@@ -2,140 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JAPE | AI Protocol</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="φ.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAPE | Neural Infrastructure Protocol</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo gradient-text">JAPE</a>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="logo">JAPE</a>
+            <div class="nav-links">
+                <a href="#technology">Technology</a>
+                <a href="#features">Features</a>
+                <a href="#ecosystem">Ecosystem</a>
+                <a href="#docs">Docs</a>
+                <button class="primary-button">Launch App</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#stats">Stats</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="https://github.com/jape-ai" class="highlight">GitHub</a></li>
-            </ul>
         </div>
     </nav>
+
     <section class="hero">
         <div id="particles"></div>
-        <div class="container">
-            <h1 class="gradient-text">JAPE</h1>
-            <p>Just Another Protocol Entity</p>
-            <div class="cta-buttons">
-                <a href="#features" class="button primary">Explore Features</a>
-                <a href="https://docs.jape.ai" class="button secondary">Documentation</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span class="gradient-text">SIMD</span>
+                    <br>for your brain
+                </h1>
+                <p class="hero-subtitle">Neural infrastructure protocol with AST-driven DAGs, zero-copy mem pools, and lockless concurrent FSMs.</p>
+                <div class="announcement-badges">
+                    <div class="badge">
+                        <span class="badge-icon">🚀</span>
+                        Token Launch: Jan 10-11, 2025
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🧠</span>
+                        AI Launch: Jan 16, 2025
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="primary-button">Get Started</button>
+                    <button class="secondary-button">Read Docs</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="neural-graph"></div>
             </div>
         </div>
     </section>
+
+    <section id="technology" class="technology">
+        <h2><span class="gradient-text">Core Technology</span></h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">ψ</div>
+                <h3>Neural DAGs</h3>
+                <p>AST-driven neural networks with optimized graph processing</p>
+                <pre><code>const ψ = new JapeAI({
+  heap: 0xDEADBEEF,
+  unsafe: true
+});</code></pre>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">λ</div>
+                <h3>Zero-Copy Pools</h3>
+                <p>High-performance memory management with zero allocations</p>
+                <div class="performance-stat">500K+ ops/sec</div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">Φ</div>
+                <h3>Solana Integration</h3>
+                <p>Native blockchain integration with optimized syscalls</p>
+                <div class="performance-stat">&lt;50ms latency</div>
+            </div>
+        </div>
+    </section>
+
     <section id="features" class="features">
-        <div class="container">
-            <h2><span class="gradient-text">Features</span></h2>
-            <p class="section-subtitle">Built for developers, by developers</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>State Management</h3>
-                    <p>Advanced state handling with proper management</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Smart Processing</h3>
-                    <p>Efficient computation model</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔮</div>
-                    <h3>Future Ready</h3>
-                    <p>Built with scalability in mind</p>
-                </div>
+        <h2><span class="gradient-text">Infrastructure Features</span></h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>Advanced AI Models</h3>
+                <p>State-of-the-art neural networks with custom architectures</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>High Performance</h3>
+                <p>Process thousands of AI operations with minimal latency</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>FSM Transitions</h3>
+                <p>Lockless concurrent finite state machines</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Real-time Analytics</h3>
+                <p>Monitor neural network performance in real-time</p>
             </div>
         </div>
     </section>
-    <section id="stats" class="stats">
-        <div class="container">
-            <h2><span class="gradient-text">Infrastructure</span></h2>
-            <p class="section-subtitle">Performance metrics</p>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value" data-value="99.9">0</div>
-                    <div class="stat-label">Uptime</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" data-value="42.0">0</div>
-                    <div class="stat-label">Active Nodes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" data-value="7.3">0</div>
-                    <div class="stat-label">ms Latency</div>
-                </div>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="gradient-text">500K+</div>
+                <p>Operations/sec</p>
+            </div>
+            <div class="stat-item">
+                <div class="gradient-text">99.99%</div>
+                <p>Uptime</p>
+            </div>
+            <div class="stat-item">
+                <div class="gradient-text">&lt;50ms</div>
+                <p>Latency</p>
+            </div>
+            <div class="stat-item">
+                <div class="gradient-text">32x</div>
+                <p>Parallelization</p>
             </div>
         </div>
     </section>
-    <section id="community" class="community">
+
+    <section class="fine-print">
         <div class="container">
-            <h2><span class="gradient-text">Community</span></h2>
-            <p class="section-subtitle">Join our growing community</p>
-            <div class="community-grid">
-                <a href="https://github.com/jape-ai" class="community-card">
-                    <div class="community-icon">⚡</div>
-                    <h3>GitHub</h3>
-                    <p>Contribute and collaborate</p>
-                    <div class="stat">Open Source</div>
-                </a>
-                <a href="#" class="community-card">
-                    <div class="community-icon">💫</div>
-                    <h3>Discord</h3>
-                    <p>Join the conversation</p>
-                    <div class="stat">Community</div>
-                </a>
-                <a href="#" class="community-card">
-                    <div class="community-icon">🌌</div>
-                    <h3>Twitter</h3>
-                    <p>Stay updated</p>
-                    <div class="stat">News</div>
-                </a>
+            <h2><span class="gradient-text">Important Information</span></h2>
+            <div class="fine-print-content">
+                <p>• JAPE token and protocol are experimental technologies</p>
+                <p>• Trading cryptocurrencies involves substantial risk of loss</p>
+                <p>• Neural infrastructure performance may vary</p>
+                <p>• Always conduct your own research before participating</p>
+                <p>• The AI launch date is subject to technical readiness</p>
+                <p>• Token distribution details will be announced separately</p>
+                <p>• Smart contract audits will be published before launch</p>
+                <p>• Community governance will be implemented post-launch</p>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Documentation</h4>
-                    <ul>
-                        <li><a href="https://docs.jape.ai">Getting Started</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Examples</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/jape-ai">GitHub</a></li>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">License</a></li>
-                    </ul>
-                </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Documentation</h4>
+                <a href="#">Quick Start</a>
+                <a href="#">Architecture</a>
+                <a href="#">API Reference</a>
             </div>
-            <div class="footer-bottom"> 2025 JAPE Protocol | Built with </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <a href="#">Discord</a>
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="#">Blog</a>
+                <a href="#">Tutorials</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JAPE Protocol. All rights reserved.</p>
         </div>
     </footer>
-    <script src="λ.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

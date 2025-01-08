@@ -1,112 +1,72 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Terminal from '../components/Terminal';
-import HexBackground from '../components/HexBackground';
-import BinaryText from '../components/BinaryText';
+import Head from 'next/head';
 
 export default function Home() {
-  const [commandsComplete, setCommandsComplete] = useState(false);
-
-  const initialCommands = [
-    'help',
-    'about',
-    'version',
-    'status'
-  ];
-
-  const features = [
-    {
-      hex: '0x1337',
-      title: "AST Optimization",
-      desc: "inline asm for your thoughts"
-    },
-    {
-      hex: '0xDEAD',
-      title: "Kernel Panic",
-      desc: "automated crisis management"
-    },
-    {
-      hex: '0xBEEF',
-      title: "Zero-Copy",
-      desc: "mem::forget(your_problems)"
-    },
-    {
-      hex: '0xCAFE',
-      title: "FFI",
-      desc: "btw i use unsafe"
-    }
-  ];
-
   return (
-    <main className="min-h-screen bg-black text-green-400 font-mono">
-      <HexBackground />
-      
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-center"
-          >
-            <BinaryText 
-              text="0xJAPE" 
-              className="text-6xl mb-8 font-bold tracking-wider"
-            />
-            
-            <div className="max-w-2xl mx-auto mb-12">
-              <Terminal 
-                commands={initialCommands}
-                onCommandComplete={() => setCommandsComplete(true)}
-              />
-            </div>
+    <>
+      <Head>
+        <title>JAPE | AI Protocol</title>
+        <meta name="description" content="Just Another Protocol Entity" />
+      </Head>
 
-            {commandsComplete && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <a 
-                  href="https://docs.jape.ai"
-                  className="inline-block px-8 py-3 bg-green-500/20 text-green-400 rounded-lg hover:bg-green-500/30 transition-all"
-                >
-                  RTFM →
-                </a>
-              </motion.div>
-            )}
-          </motion.div>
-        </div>
-      </section>
+      <main className="min-h-screen bg-gradient-to-b from-black to-gray-900">
+        <section className="h-screen flex items-center justify-center">
+          <div className="text-center">
+            <motion.h1 
+              className="text-6xl font-bold mb-4 gradient-text"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              JAPE
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-text-secondary mb-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              Just Another Protocol Entity
+            </motion.p>
 
-      {/* Features Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-black/50 p-6 rounded-lg backdrop-blur-sm border border-green-500/20 hover:border-green-500/40 transition-all group"
-              >
-                <div className="text-xl mb-4 text-green-500/60 font-mono group-hover:text-green-400 transition-colors">
-                  {feature.hex}
-                </div>
-                <h3 className="text-xl mb-2">{feature.title}</h3>
-                <p className="text-green-400/60">{feature.desc}</p>
-              </motion.div>
-            ))}
+            {/* Launch Announcements */}
+            <motion.div
+              className="space-y-6 mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg max-w-md mx-auto">
+                <h2 className="text-2xl font-bold mb-2">🚀 Token Launch</h2>
+                <p className="text-white">Coming January 10-11, 2025</p>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-6 rounded-lg max-w-md mx-auto">
+                <h2 className="text-2xl font-bold mb-2">🤖 AI Launch</h2>
+                <p className="text-white">Coming January 16, 2025</p>
+              </div>
+            </motion.div>
+
+            {/* Fine Prints Section */}
+            <motion.div
+              className="mt-16 text-sm text-gray-400 max-w-2xl mx-auto px-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <h3 className="text-lg font-semibold mb-4">Important Information</h3>
+              <div className="space-y-2 text-left">
+                <p>• JAPE token and protocol are experimental technologies.</p>
+                <p>• Trading cryptocurrencies involves substantial risk of loss.</p>
+                <p>• Past performance is not indicative of future results.</p>
+                <p>• Always conduct your own research before participating.</p>
+                <p>• The AI launch date is subject to technical readiness.</p>
+                <p>• Token distribution details will be announced separately.</p>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 text-center text-green-500/40">
-        <p>built with vim and no sleep</p>
-      </footer>
-    </main>
-  );
+        </section>
+      </main>
+    </>
+  )
 }

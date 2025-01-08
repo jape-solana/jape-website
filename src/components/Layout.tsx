@@ -1,6 +1,7 @@
 import { ReactNode, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,6 +19,14 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background-light">
+      <Head>
+        <title>JAPE | AI Protocol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+      </Head>
+
       <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
